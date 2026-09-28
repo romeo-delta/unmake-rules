@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-28T06:37:00Z",
+  "updatedAt": "2026-09-28T06:55:00Z",
   "toggles": [
     {
       "id": "instagram.hide-feed",
@@ -46,6 +46,15 @@
       "selectors": [".p13n-desktop-grid"],
       "urlFilter": ".*amazon\\.com\\.au.*",
       "defaultEnabled": true
+    },
+    {
+      "id": "amazon.homepage-focus",
+      "site": "amazon.com.au",
+      "label": "Amazon homepage: show only header, search bar and login",
+      "category": "shopping",
+      "selectors": ["body > *:not(#navbar):not(#navFooter):not(#skiplink):not(script):not(style)"],
+      "urlFilter": "^https?://(www\\.)?amazon\\.com\\.au/?(\\?.*)?$",
+      "defaultEnabled": false
     }
   ]
 }
