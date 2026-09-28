@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-28T00:00:00Z",
+  "toggles": [
+    {
+      "id": "instagram.hide-feed",
+      "site": "instagram.com",
+      "label": "Hide Instagram feed",
+      "category": "social",
+      "selectors": ["main[role='main'] section > div > div"],
+      "urlFilter": ".*instagram\\.com.*",
+      "defaultEnabled": false
+    },
+    {
+      "id": "instagram.hide-stories",
+      "site": "instagram.com",
+      "label": "Hide Instagram Stories bar",
+      "category": "social",
+      "selectors": ["section[role='tablist']"],
+      "urlFilter": ".*instagram\\.com.*",
+      "defaultEnabled": false
+    },
+    {
+      "id": "youtube.hide-shorts",
+      "site": "youtube.com",
+      "label": "Hide YouTube Shorts",
+      "category": "video",
+      "selectors": ["ytd-rich-shelf-renderer[is-shorts]", "ytd-reel-shelf-renderer"],
+      "urlFilter": ".*youtube\\.com.*",
+      "defaultEnabled": true
+    },
+    {
+      "id": "amazon.hide-sponsored",
+      "site": "amazon.com.au",
+      "label": "Hide Amazon sponsored blocks",
+      "category": "shopping",
+      "selectors": ["[data-component-type='sp-sponsored-result']"],
+      "urlFilter": ".*amazon\\.com\\.au.*",
+      "defaultEnabled": true
+    },
+    {
+      "id": "amazon.hide-recommendations",
+      "site": "amazon.com.au",
+      "label": "Hide Amazon recommendation carousels",
+      "category": "shopping",
+      "selectors": [".p13n-desktop-grid"],
+      "urlFilter": ".*amazon\\.com\\.au.*",
+      "defaultEnabled": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-28T00:00:00Z",
+  "themes": [
+    {
+      "id": "news.calm-reader",
+      "name": "Calm Reader",
+      "domains": ["nytimes.com", "washingtonpost.com", "theguardian.com"],
+      "css": "body{font-family:Georgia,serif!important;} .ad,.ad-slot,[class*='advertisement']{display:none!important;} *{animation:none!important;transition:none!important;}",
+      "defaultEnabled": false
+    }
+  ]
+}
