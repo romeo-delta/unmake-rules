@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-28T06:55:00Z",
+  "updatedAt": "2026-10-03T00:00:00Z",
   "toggles": [
     {
       "id": "instagram.hide-feed",
+      "icon": "home",
       "site": "instagram.com",
       "label": "Hide Instagram feed",
       "category": "social",
@@ -13,6 +14,7 @@
     },
     {
       "id": "instagram.hide-stories",
+      "icon": "ring",
       "site": "instagram.com",
       "label": "Hide Instagram Stories bar",
       "category": "social",
@@ -22,6 +24,7 @@
     },
     {
       "id": "youtube.hide-shorts",
+      "icon": "play",
       "site": "youtube.com",
       "label": "Hide YouTube Shorts",
       "category": "video",
@@ -31,6 +34,7 @@
     },
     {
       "id": "amazon.hide-sponsored",
+      "icon": "grid",
       "site": "amazon.com.au",
       "label": "Hide Amazon sponsored blocks",
       "category": "shopping",
@@ -40,6 +44,7 @@
     },
     {
       "id": "amazon.hide-recommendations",
+      "icon": "grid",
       "site": "amazon.com.au",
       "label": "Hide Amazon recommendation carousels",
       "category": "shopping",
@@ -49,11 +54,25 @@
     },
     {
       "id": "amazon.homepage-focus",
+      "icon": "home",
       "site": "amazon.com.au",
       "label": "Amazon homepage: show only header, search bar and login",
       "category": "shopping",
-      "selectors": ["body > *:not(#navbar):not(#navFooter):not(#skiplink):not(script):not(style)"],
-      "urlFilter": "^https?://(www\\.)?amazon\\.com\\.au/?(\\?.*)?$",
+      "selectors": [
+        "#a-page > *:not(header):not(#navbar-main):not(#nav-main):not(#navbar):not(#navFooter):not(footer):not(script):not(style):not(noscript):not(:has(#nav-belt)):not(:has(#twotabsearchtextbox)):not(:has(#navbar-main))",
+        "#pageContent",
+        "#gw-layout",
+        "#gw-desktop-herotator",
+        "[id^=\"desktop-grid\"]",
+        "[id^=\"desktop-btf\"]",
+        "[id^=\"desktop-banner\"]",
+        "#rhf",
+        "#rhf-container",
+        "#navFooter",
+        "#navBackToTop",
+        "body > :not(#a-page):not(.a-popover):not([id^=\"a-popover\"]):not(.a-modal-scroller):not([id^=\"nav-flyout\"]):not(header):not(#navbar-main):not(#nav-main):not(#navbar):not(#nav-belt):not(#navFooter):not(footer):not(script):not(style):not(noscript):not(link):not(meta):not(:has(#navbar-main, #nav-belt, #twotabsearchtextbox))"
+      ],
+      "urlFilter": "^https?://(www\\.)?amazon\\.com\\.au/(ref=[^/?#]*)?([?#].*)?$",
       "defaultEnabled": false
     }
   ]
